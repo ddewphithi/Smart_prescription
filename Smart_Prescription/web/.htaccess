@@ -1,0 +1,8 @@
+#[skeleton]/web/.htaccess
+AddDefaultCharset UTF-8
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?r=$1 [QSA,L]
+</IfModule>
